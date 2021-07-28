@@ -10,7 +10,6 @@ class MyForm extends Component {
   };
 
   componentDidMount() {
-    // kai komponentas yra edit vietoje
     this.props.place && this.propsToState();
   }
 
@@ -45,7 +44,7 @@ class MyForm extends Component {
       placeType,
     };
 
-    // jei mes esam Place item vidue tai norim vygdyti PlaceItem metoda
+   
     if (this.props.place) {
       console.log('Editinam one Sukuriam');
       this.props.onEdit(dataToCreateNewPlace);
@@ -53,7 +52,7 @@ class MyForm extends Component {
     }
 
     // console.log('dataToCreateNewPlace', dataToCreateNewPlace);
-    // create new Place
+   
     console.log('Sukuriam');
 
     const createSuccessOrError = await this.props.onCreateNewPlace(dataToCreateNewPlace);

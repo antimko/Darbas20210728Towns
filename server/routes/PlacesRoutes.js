@@ -2,17 +2,17 @@ const express = require('express');
 const PlaceModel = require('../models/Place');
 const router = express.Router();
 
-// router test
+
 // router.get('/test', (req, res) => {
-// res.json('testing route');
+// res.json('test');
 // });
 
 // create new place
 router.post('/api/place/new', async (req, res) => {
   const gotNewPlaceData = req.body;
   console.log(' gotNewPlaceData', gotNewPlaceData);
-  //   res.json('you are about to create a place');
-  // naujos vietos sukurimas naudojant modeli
+  //   res.json('about to create a place');
+  
   const newPlace = new PlaceModel(gotNewPlaceData);
   try {
     const creatingNewPlaceResult = await newPlace.save();

@@ -44,7 +44,7 @@ export const deletePlaceSend = async (id) => {
   try {
     const deleteResult = await axios.delete('http://localhost:4000/api/place/delete/' + id);
     // console.log('deleteResult', deleteResult.data);
-    // atnaujinti sarasa kad neliktu ka istrynem
+   
     if (deleteResult.data) {
       return true;
     }
@@ -57,7 +57,7 @@ export const getFilteredPlaces = async (filterValue) => {
   try {
     const filteredPlaces = await axios.get('http://localhost:4000/api/place/' + filterValue);
     if (Array.isArray(filteredPlaces.data) && filteredPlaces.data.length) {
-      // nustatom state i tai ka gavom
+      
       return filteredPlaces.data;
     }
   } catch (error) {

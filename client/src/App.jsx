@@ -27,8 +27,7 @@ class App extends Component {
   createNewPlace = async (dataToCreateNewPlace) => {
     const successOrError = await createPlaceSend(dataToCreateNewPlace);
     if (successOrError === true) {
-      // atnaujinti sarasa places po ivedimo
-      this.getAllPlaces();
+      // atnaujinti sarasa places po ivedimo  this.getAllPlaces();
       return true;
     }
     console.log('Klaida sukuriant');
@@ -36,7 +35,7 @@ class App extends Component {
   };
 
   getAllPlaces = async () => {
-    // gaunam visas vietas is db
+    
     const placesArr = await getPlaces();
     this.setState({ places: placesArr });
   };
@@ -58,7 +57,7 @@ class App extends Component {
     if (!filterValue) return this.getAllPlaces();
     const filteredPlaces = await getFilteredPlaces(filterValue);
     console.log('filteredPlaces', filteredPlaces);
-    // nustatyti kad matytume tik tai ka isviltravom
+ 
     this.setState({ places: filteredPlaces });
   };
 
