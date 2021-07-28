@@ -27,7 +27,7 @@ class App extends Component {
   createNewPlace = async (dataToCreateNewPlace) => {
     const successOrError = await createPlaceSend(dataToCreateNewPlace);
     if (successOrError === true) {
-      // atnaujinti sarasa places po ivedimo  this.getAllPlaces();
+      
       return true;
     }
     console.log('Klaida sukuriant');
