@@ -46,14 +46,14 @@ class MyForm extends Component {
 
    
     if (this.props.place) {
-      console.log('Editinam one Sukuriam');
+      // console.log('Editinam one Sukuriam');
       this.props.onEdit(dataToCreateNewPlace);
       return;
     }
 
     // console.log('dataToCreateNewPlace', dataToCreateNewPlace);
    
-    console.log('Sukuriam');
+    // console.log('Sukuriam');
 
     const createSuccessOrError = await this.props.onCreateNewPlace(dataToCreateNewPlace);
     if (createSuccessOrError === true) return this.clearInputs();
@@ -69,10 +69,10 @@ class MyForm extends Component {
     const { state: s } = this;
     return (
       <div className={this.props.place ? 'card-body' : 'w-50'}>
-        {this.props.place ? null : <h2>Create new place</h2>}
+        {this.props.place ? null : <h2>Sukurti nauja vietovę</h2>}
         {s.error && (
           <div className="alert alert-danger" role="alert">
-            Please check form fields <br />
+            Prašome patikrinti pildymo formą <br />
             {s.error.message}
           </div>
         )}
@@ -84,7 +84,7 @@ class MyForm extends Component {
               type="text"
               className={'form-control ' + (s.error.errors?.name ? 'is-invalid' : '')}
               name="name"
-              placeholder="Name of Place"
+              placeholder="Vietovės pavadinimas"
             />
           </div>
           <div className="form-group">
@@ -94,7 +94,7 @@ class MyForm extends Component {
               type="text"
               className={'form-control ' + (s.error.errors?.continent ? 'is-invalid' : '')}
               name="continent"
-              placeholder="Continent"
+              placeholder="Kontinentas"
             />
           </div>
           <div className="form-group">
@@ -104,7 +104,7 @@ class MyForm extends Component {
               type="number"
               className={'form-control ' + (s.error.errors?.population ? 'is-invalid' : '')}
               name="population"
-              placeholder="Population"
+              placeholder="Gyventojų skaičius"
             />
           </div>
           <select
@@ -113,10 +113,10 @@ class MyForm extends Component {
             name="placeType"
             className="custom-select"
           >
-            <option value="town">Town</option>
-            <option value="country">Country</option>
+            <option value="town">Miestas</option>
+            <option value="country">Šalis</option>
           </select>
-          <button className="btn btn-primary my-4">{this.props.place ? 'Save' : 'Create'}</button>
+          <button className="btn btn-primary my-4">{this.props.place ? 'Save' : 'Sukurti'}</button>
         </form>
       </div>
     );

@@ -1,0 +1,11 @@
+.color-red{
+    color: red
+};
+
+button btn .btn-info {
+    color: blue;
+}
+
+button btn .btn-light{
+    background-color: yellow;
+}

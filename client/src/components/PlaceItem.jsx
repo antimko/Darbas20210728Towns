@@ -23,18 +23,18 @@ class PlaceItem extends Component {
           <MyForm place={p} onEdit={this.handleEdit} />
         ) : (
           <React.Fragment>
-            <div className="card-header">Place type: {p.placeType} </div>
+            <div className="card-header">Vietovė: {p.placeType} </div>
             <div className="card-body">
               <h5 className="card-title">{p.name}</h5>
-              <p className="card-text">Continent: {p.continent}</p>
-              <p className="card-text">Population: {p.population}</p>
+              <p className="card-text">Kontinentas: {p.continent}</p>
+              <p className="card-text">Gyventojų skaičius: {p.population}</p>
             </div>
             <div className="card-footer">
               <button onClick={this.handleEdit} className="btn btn-success">
-                Edit
+                Redaguoti
               </button>
               <button onClick={() => this.props.onDelete(p._id)} className="btn btn">
-                <strong>Delete</strong>
+                <strong className="color-red">Trinti</strong>
               </button>
             </div>
           </React.Fragment>
