@@ -1,0 +1,25 @@
+{
+  "name": "countries-and-towns",
+  "version": "1.0.0",
+  "description": "Darbas",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "react": "npm start --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antimko/Darbas20210728.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antimko/Darbas20210728/issues"
+  },
+  "homepage": "https://github.com/antimko/Darbas20210728#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3",
+    "morgan": "^1.10.0"
+  }
+}
