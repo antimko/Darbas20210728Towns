@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-// reikia apibrezti kokio tipo duomenys bus saugomi DB
+
 
 const placeSchema = new Schema(
   {
@@ -23,11 +23,10 @@ const placeSchema = new Schema(
       required: true,
     },
   },
-  { timestamps: true } /// adds timestamps
+
 );
 
-// exportuoti naujai sukurta objekta pagal sia schema
-//                           turetu buti vienaskai musu kolecijos pav.
+
 const PlaceModel = mongoose.model('place', placeSchema);
 
 module.exports = PlaceModel;
