@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antimko/Darbas20210728.git"
+    "url": "git+https://github.com/antimko/Darbas20210728Towns.git"
   },
   "bugs": {
-    "url": "https://github.com/antimko/Darbas20210728/issues"
+    "url": "https://github.com/antimko/Darbas20210728Towns/issues"
   },
-  "homepage": "https://github.com/antimko/Darbas20210728#readme",
+  "homepage": "https://github.com/antimko/Darbas20210728Towns#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
