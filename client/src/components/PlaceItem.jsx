@@ -18,7 +18,7 @@ class PlaceItem extends Component {
   render() {
     const { place: p } = this.props;
     return (
-      <div className={'card m-2 ' + (p.placeType === 'country' ? 'text-white bg-secondary ' : '')}>
+      <div className={'card m-5 ' + (p.placeType === 'country' ? 'text-primary bg ' : '')}>
         {this.state.isEdiOn ? (
           <MyForm place={p} onEdit={this.handleEdit} />
         ) : (
@@ -33,8 +33,8 @@ class PlaceItem extends Component {
               <button onClick={this.handleEdit} className="btn btn-success">
                 Edit
               </button>
-              <button onClick={() => this.props.onDelete(p._id)} className="btn btn-danger">
-                Delete
+              <button onClick={() => this.props.onDelete(p._id)} className="btn btn">
+                <strong>Delete</strong>
               </button>
             </div>
           </React.Fragment>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import MyForm from './components/MyForm';
 import PlaceList from './components/PlaceList';
-// import axios from 'axios';
 import {
   getPlaces,
   updatePlaceSend,
@@ -20,7 +19,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // axios.get('http://localhost:4000/test');
     this.getAllPlaces();
   }
 
